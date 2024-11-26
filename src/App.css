@@ -1,0 +1,95 @@
+/* Body background */
+body {
+  background-image: url('https://imgs.search.brave.com/bdeJjrRz8-1fOs86N4cKUyDw4MQBF6zF4NrVGIXJS9o/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNTc4/ODA1NjM1L3Bob3Rv/L3RpYy10YWMtdG9l/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1jNF9DWjlhWkhx/Wlp0dXZwWUtFNV9T/RVhIUE4xZ0RpUi1V/SnNzV1JSd2tvPQ');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Game container */
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Status text */
+.status {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Game board */
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Rows of buttons */
+.board-row {
+  display: flex;
+}
+
+/* Square button styling */
+.square {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text for X or O */
+  border: 2px solid #bbb;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.square:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.1); /* Slightly enlarge the square */
+}
+
+.square:focus {
+  outline: none;
+}
+
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .square {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .game {
+    padding: 15px;
+  }
+
+  .board-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
